@@ -28,12 +28,12 @@ export default class App extends React.Component {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen
+          {/* <Stack.Screen
             name="Login"
             component={Login}
             hideNavBar={false}
             options={{ headerShown: false }}
-          />
+          /> */}
           <Stack.Screen
             name="Main"
             component={MainTabScreen}
