@@ -20,6 +20,8 @@ import ViewInformationStudent from "../adminPage/ViewInformationStudent";
 import ViewPostTask from "../adminPage/ViewPostTask";
 import ViewRecruiter from "../adminPage/ViewRecruiter";
 import ViewVote from "../adminPage/ViewVote";
+import MainViewAccount from "../adminPage/MainViewAccount";
+import Menu from "../Menu/Menu";
 
 var e;
 const HomeStack = createStackNavigator();
@@ -122,6 +124,11 @@ const AccountStackScreen = ({ navigation }) => {
       }}
     >
       <HomeStack.Screen
+        name="MainViewAccount"
+        component={MainViewAccount}
+        options={{ headerShown: false }}
+      />
+      {/* <HomeStack.Screen
         name="ViewInformationStudent"
         component={ViewInformationStudent}
         options={{ headerShown: false }}
@@ -130,7 +137,7 @@ const AccountStackScreen = ({ navigation }) => {
         name="ViewRecruiter"
         component={ViewRecruiter}
         options={{ headerShown: false }}
-      />
+      /> */}
     </HomeStack.Navigator>
   );
 };
@@ -229,6 +236,11 @@ const SettingStackScreen = ({ navigation }) => {
         },
       }}
     >
+      <HomeStack.Screen
+        name="Menu"
+        component={Menu}
+        options={{ headerShown: false }}
+      />
       <HomeStack.Screen
         name="ApproveRequestStudent"
         component={ApproveRequestStudent}
